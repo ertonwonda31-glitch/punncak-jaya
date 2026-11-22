@@ -1,0 +1,736 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Platform pengembangan dan pemasaran produk lokal Kabupaten Puncak Jaya.">
+  <title>Produk Puncak Jaya | Ulla Newabakc</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a href="#" class="logo">🌿 PRODUK<span>PUNCAK</span></a>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <nav id="navMenu">
+    <a href="#beranda">Beranda</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#produk">Produk Lokal</a>
+    <a href="#visi">Visi Misi</a>
+    <a href="#kontak">Kontak</a>
+    <button onclick="openCart()">🛒 Keranjang (<span id="cartCount">0</span>)</button>
+    <button onclick="openAdmin()">Admin</button>
+  </nav>
+</header>
+
+<section class="hero" id="beranda">
+  <div class="hero-content">
+    <span class="tag">🌱 PLATFORM PRODUK LOKAL PAPUA</span>
+    <h1>Membangun Ekonomi Lokal <span>Puncak Jaya</span></h1>
+    <p>
+      Mengenalkan, mempromosikan, dan mengembangkan potensi
+      produk lokal masyarakat Puncak Jaya kepada Indonesia.
+    </p>
+    <a href="#produk" class="btn">Jelajahi Produk</a>
+    <a href="#tentang" class="btn btn-outline">Tentang Kami</a>
+  </div>
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=900"
+         alt="Produk pertanian lokal">
+  </div>
+</section>
+
+<section class="stats">
+  <div><h2>04</h2><p>Platform Produk Lokal</p></div>
+  <div><h2>2026</h2><p>Tahun Pengembangan</p></div>
+  <div><h2>UMKM</h2><p>Pemberdayaan Masyarakat</p></div>
+</section>
+
+<section class="section" id="tentang">
+  <span class="tag">TENTANG PLATFORM</span>
+  <h2>Mengenal Produk Puncak Jaya</h2>
+  <p>
+    Produk Puncak Jaya merupakan platform informasi dan pemasaran
+    digital yang bertujuan memperkenalkan potensi produk lokal,
+    hasil pertanian, kerajinan, dan usaha masyarakat Kabupaten
+    Puncak Jaya, Papua Pegunungan.
+  </p>
+  <div class="about-grid">
+    <div class="info-card">
+      <h3>🌱 Pengembangan</h3>
+      <p>Mendukung pengembangan potensi ekonomi masyarakat lokal.</p>
+    </div>
+    <div class="info-card">
+      <h3>🤝 Pemberdayaan</h3>
+      <p>Membuka peluang pemasaran bagi produsen dan pelaku usaha.</p>
+    </div>
+    <div class="info-card">
+      <h3>💻 Digitalisasi</h3>
+      <p>Menghubungkan produk lokal dengan konsumen melalui teknologi.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section dark-section" id="visi">
+  <span class="tag">ARAH DAN TUJUAN</span>
+  <h2>Visi dan Misi</h2>
+  <div class="about-grid">
+    <div class="info-card">
+      <h3>Visi</h3>
+      <p>
+        Menjadi platform digital yang mendorong kemajuan,
+        kemandirian, dan daya saing produk lokal Puncak Jaya.
+      </p>
+    </div>
+    <div class="info-card">
+      <h3>Misi</h3>
+      <ul>
+        <li>Mempromosikan produk lokal.</li>
+        <li>Mendukung pelaku UMKM.</li>
+        <li>Mengembangkan pemasaran digital.</li>
+        <li>Membangun jaringan ekonomi masyarakat.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="produk">
+  <span class="tag">KATALOG DIGITAL</span>
+  <h2>Produk Lokal Puncak Jaya</h2>
+  <p>Pilih produk, masukkan ke keranjang, kemudian lakukan pemesanan.</p>
+
+  <div class="search-area">
+    <input type="search" id="searchInput"
+           placeholder="Cari nama produk..."
+           oninput="renderProducts()">
+    <select id="categoryFilter" onchange="renderProducts()">
+      <option value="Semua">Semua kategori</option>
+      <option value="Pertanian">Pertanian</option>
+      <option value="Kerajinan">Kerajinan</option>
+      <option value="Kuliner">Kuliner</option>
+      <option value="Lainnya">Lainnya</option>
+    </select>
+  </div>
+
+
+<!-- KATALOG PRODUK LOKAL LENGKAP -->
+<section class="section" id="katalog-lengkap">
+  <span class="tag">POTENSI EKONOMI DAERAH</span>
+  <h2>Jelajahi Kekayaan Produk Puncak Jaya</h2>
+  <p>
+    Mengenal berbagai potensi hasil bumi, pertanian, perkebunan,
+    peternakan, kerajinan dan usaha masyarakat Puncak Jaya.
+  </p>
+
+  <div class="about-grid">
+
+    <div class="info-card">
+      <h3>🥔 Hasil Pertanian</h3>
+      <ul>
+        <li>Ubi jalar</li>
+        <li>Singkong</li>
+        <li>Keladi</li>
+        <li>Sayuran lokal</li>
+        <li>Wortel</li>
+        <li>Kubis</li>
+        <li>Daun bawang</li>
+        <li>Jagung</li>
+      </ul>
+    </div>
+
+    <div class="info-card">
+      <h3>☕ Hasil Perkebunan</h3>
+      <ul>
+        <li>Kopi lokal</li>
+        <li>Buah pinang</li>
+        <li>Kakao</li>
+        <li>Hasil kebun masyarakat</li>
+        <li>Tanaman pangan lokal</li>
+      </ul>
+    </div>
+
+    <div class="info-card">
+      <h3>🍠 Produk Pangan</h3>
+      <ul>
+        <li>Olahan ubi</li>
+        <li>Olahan singkong</li>
+        <li>Makanan tradisional</li>
+        <li>Hasil olahan pertanian</li>
+        <li>Pangan lokal Papua</li>
+      </ul>
+    </div>
+
+    <div class="info-card">
+      <h3>🧺 Kerajinan Lokal</h3>
+      <ul>
+        <li>Noken Papua</li>
+        <li>Kerajinan anyaman</li>
+        <li>Aksesori tradisional</li>
+        <li>Hasil karya masyarakat</li>
+        <li>Kerajinan tangan</li>
+      </ul>
+    </div>
+
+    <div class="info-card">
+      <h3>🐖 Peternakan</h3>
+      <ul>
+        <li>Babi ternak</li>
+        <li>Ayam kampung</li>
+        <li>Telur ayam</li>
+        <li>Hasil peternakan masyarakat</li>
+      </ul>
+    </div>
+
+    <div class="info-card">
+      <h3>🍎 Buah-buahan</h3>
+      <ul>
+        <li>Pisang</li>
+        <li>Alpukat</li>
+        <li>Markisa</li>
+        <li>Buah lokal musiman</li>
+      </ul>
+    </div>
+
+  </div>
+  <p class="note">
+    Daftar ini merupakan contoh kategori dan potensi produk.
+    Ketersediaan setiap produk perlu dikonfirmasi kepada produsen lokal.
+  </p>
+</section>
+
+<!-- INFORMASI PRODUK UNGGULAN -->
+<section class="section dark-section" id="produk-unggulan">
+  <span class="tag">PRODUK UNGGULAN</span>
+  <h2>Potensi Produk Masyarakat</h2>
+
+  <div class="about-grid">
+
+    <div class="info-card">
+      <h3>🥔 Ubi Jalar</h3>
+      <p>
+        Produk pangan yang dapat dikembangkan menjadi bahan
+        makanan, olahan kemasan dan produk usaha lokal.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3>☕ Kopi Lokal</h3>
+      <p>
+        Peluang pengembangan kopi melalui pengolahan,
+        pengemasan dan pemasaran digital.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3>🧺 Noken Papua</h3>
+      <p>
+        Kerajinan khas Papua yang dapat diperkenalkan
+        melalui katalog dan pemasaran secara online.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3>🥬 Sayuran Lokal</h3>
+      <p>
+        Hasil pertanian masyarakat yang dapat dipasarkan
+        kepada konsumen dan pedagang.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PELUANG USAHA -->
+<section class="section" id="peluang-usaha">
+  <span class="tag">EKONOMI MASYARAKAT</span>
+  <h2>Peluang Pengembangan Usaha</h2>
+
+  <div class="about-grid">
+
+    <div class="info-card">
+      <h3>01. Pemasaran Digital</h3>
+      <p>Mempromosikan produk melalui website dan media sosial.</p>
+    </div>
+
+    <div class="info-card">
+      <h3>02. Pengemasan Produk</h3>
+      <p>Meningkatkan kualitas tampilan dan identitas produk.</p>
+    </div>
+
+    <div class="info-card">
+      <h3>03. Kemitraan UMKM</h3>
+      <p>Menghubungkan produsen, pedagang dan konsumen.</p>
+    </div>
+
+    <div class="info-card">
+      <h3>04. Pelatihan Digital</h3>
+      <p>Mendorong masyarakat memahami teknologi pemasaran.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- LAYANAN PENJUAL -->
+<section class="section contact" id="layanan-penjual">
+  <span class="tag">GABUNG BERSAMA KAMI</span>
+  <h2>Daftarkan Produk Anda</h2>
+  <p>
+    Anda memiliki produk lokal atau usaha masyarakat?
+    Mari perkenalkan produk tersebut melalui platform
+    Pengembangan Produk Lokal Puncak Jaya.
+  </p>
+
+  <form id="sellerForm" class="seller-form">
+    <input id="sellerName" placeholder="Nama produsen atau pemilik usaha" required>
+    <input id="sellerBusiness" placeholder="Nama usaha" required>
+    <input id="sellerProduct" placeholder="Nama produk" required>
+    <input id="sellerPhone" placeholder="Nomor WhatsApp" required>
+    <textarea id="sellerAddress" placeholder="Alamat atau lokasi usaha" required></textarea>
+    <button class="btn" type="submit">Daftarkan Produk</button>
+  </form>
+</section>
+
+<!-- BERITA DAN INFORMASI -->
+<section class="section" id="informasi">
+  <span class="tag">INFORMASI DAN EDUKASI</span>
+  <h2>Informasi Pengembangan Produk</h2>
+
+  <div class="about-grid">
+    <div class="info-card">
+      <h3>📢 Informasi UMKM</h3>
+      <p>Informasi pengembangan usaha kecil dan menengah.</p>
+    </div>
+
+    <div class="info-card">
+      <h3>📦 Tips Pengemasan</h3>
+      <p>Belajar mengemas produk agar menarik dan berkualitas.</p>
+    </div>
+
+    <div class="info-card">
+      <h3>📱 Pemasaran Online</h3>
+      <p>Memanfaatkan internet untuk memperluas pasar.</p>
+    </div>
+
+    <div class="info-card">
+      <h3>🌱 Pertanian Lokal</h3>
+      <p>Informasi pertanian dan pengembangan hasil bumi.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALERI -->
+<section class="section dark-section" id="galeri">
+  <span class="tag">DOKUMENTASI</span>
+  <h2>Galeri Produk dan Kegiatan</h2>
+
+  <div class="about-grid">
+    <div class="info-card">
+      <img src="images/pertanian.jpg" alt="Pertanian lokal"
+           style="width:100%;border-radius:10px">
+      <h3>Hasil Pertanian</h3>
+    </div>
+
+    <div class="info-card">
+      <img src="images/kerajinan.jpg" alt="Kerajinan lokal"
+           style="width:100%;border-radius:10px">
+      <h3>Kerajinan Masyarakat</h3>
+    </div>
+
+    <div class="info-card">
+      <img src="images/produk.jpg" alt="Produk lokal"
+           style="width:100%;border-radius:10px">
+      <h3>Produk Lokal</h3>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <h2>Pertanyaan Umum</h2>
+
+  <div class="info-card">
+    <h3>Bagaimana cara membeli produk?</h3>
+    <p>Pilih produk, masukkan ke keranjang dan kirim pesanan melalui WhatsApp.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>Bagaimana cara mendaftarkan produk?</h3>
+    <p>Isi formulir pendaftaran penjual dan kirim data kepada pengelola.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>Siapa pengelola website?</h3>
+    <p>Website ini didirikan dan dikelola oleh Ulla Newabakc.</p>
+  </div>
+</section>
+
+
+  <div class="product-grid" id="productList"></div>
+</section>
+
+<section class="section founder" id="pendiri">
+  <div>
+    <span class="tag">PENDIRI PLATFORM</span>
+    <h2>Ulla Newabakc</h2>
+    <p>
+      Pendiri dan pengelola platform Pengembangan Produk Lokal
+      Puncak Jaya. Platform ini dibangun sebagai ruang digital
+      untuk memperkenalkan potensi lokal dan membuka peluang
+      pemasaran bagi masyarakat.
+    </p>
+    <p><b>Jabatan:</b> Pendiri dan Pengelola Website</p>
+  </div>
+  <div class="founder-photo">
+    <img src=""
+         alt="Foto ilustrasi profil pendiri">
+    <small>Ganti dengan foto asli pendiri.</small>
+  </div>
+</section>
+
+<section class="section dark-section">
+  <h2>Struktur Pengelola Website</h2>
+  <div class="about-grid">
+    <div class="info-card">
+      <h3>Ulla Newabakc</h3>
+      <p>Pendiri dan Penanggung Jawab</p>
+    </div>
+    <div class="info-card">
+      <h3>Admin Website</h3>
+      <p>Pengelolaan konten dan produk</p>
+    </div>
+    <div class="info-card">
+      <h3>Tim Informasi</h3>
+      <p>Informasi dan publikasi</p>
+    </div>
+    <div class="info-card">
+      <h3>Tim Pemasaran</h3>
+      <p>Promosi dan pemasaran produk</p>
+    </div>
+  </div>
+  <p class="note">Struktur ini merupakan rancangan awal dan dapat disesuaikan dengan pengelola sebenarnya.</p>
+</section>
+
+<section class="section contact" id="kontak">
+  <h2>Hubungi Kami</h2>
+  <p>Ingin memasarkan produk lokal melalui platform ini?</p>
+  <a class="btn" id="contactLink" href="#" target="_blank">Hubungi Pengelola via WhatsApp</a>
+</section>
+
+<!-- KERANJANG -->
+<div class="modal" id="cartModal">
+  <div class="modal-box">
+    <button class="close" onclick="closeModal('cartModal')">×</button>
+    <h2>Keranjang Pesanan</h2>
+    <div id="cartItems"></div>
+    <h3 id="cartTotal">Total: Rp0</h3>
+    <form id="orderForm">
+      <input id="customerName" placeholder="Nama lengkap" required>
+      <input id="customerPhone" placeholder="Nomor WhatsApp" required>
+      <textarea id="customerAddress" placeholder="Alamat pengiriman" required></textarea>
+      <textarea id="customerNote" placeholder="Catatan pesanan"></textarea>
+      <button class="btn" type="submit">Pesan Sekarang</button>
+    </form>
+  </div>
+</div>
+
+<!-- PROMOSI UTAMA -->
+<section class="promo-section" id="promosi">
+  <div class="promo-content">
+    <span class="tag">🌿 BANGGA PRODUK LOKAL</span>
+    <h2>Dari Puncak Jaya untuk Indonesia</h2>
+    <p>
+      Mari bersama memperkenalkan hasil bumi, kerajinan,
+      dan kreativitas masyarakat Puncak Jaya melalui
+      teknologi digital.
+    </p>
+    <a href="#produk" class="btn">Belanja Produk Lokal</a>
+    <a href="#layanan-penjual" class="btn btn-outline">Gabung Jadi Penjual</a>
+  </div>
+  <div class="promo-decoration">
+    <div class="promo-icon">🌱</div>
+    <h3>Produk Lokal</h3>
+    <p>Potensi daerah, peluang masa depan.</p>
+  </div>
+</section>
+
+<!-- KEUNGGULAN PLATFORM -->
+<section class="section" id="keunggulan">
+  <span class="tag">KENAPA MEMILIH KAMI?</span>
+  <h2>Satu Platform, Banyak Peluang</h2>
+  <p>
+    Platform digital untuk mempertemukan potensi produk lokal
+    dengan masyarakat dan pasar yang lebih luas.
+  </p>
+
+  <div class="about-grid">
+    <div class="info-card">
+      <h3>🌏 Promosi Lebih Luas</h3>
+      <p>Produk lokal dapat dikenal oleh pengunjung dari berbagai daerah.</p>
+    </div>
+    <div class="info-card">
+      <h3>📱 Mudah Diakses</h3>
+      <p>Website dapat dibuka melalui telepon genggam dan komputer.</p>
+    </div>
+    <div class="info-card">
+      <h3>🤝 Mendukung UMKM</h3>
+      <p>Membantu pelaku usaha memperkenalkan produk mereka.</p>
+    </div>
+    <div class="info-card">
+      <h3>🛒 Pemesanan Online</h3>
+      <p>Pengunjung dapat memilih produk dan mengirim pesanan.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUK PILIHAN -->
+<section class="section featured-section" id="pilihan">
+  <span class="tag">REKOMENDASI KATALOG</span>
+  <h2>Jelajahi Potensi Produk Unggulan</h2>
+  <p>Kenali produk dan potensi usaha masyarakat Puncak Jaya.</p>
+
+  <div class="featured-grid">
+
+    <article class="featured-card">
+      <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=700"
+           alt="Ubi dan hasil pangan">
+      <div class="featured-content">
+        <span>HASIL PERTANIAN</span>
+        <h3>Ubi Lokal</h3>
+        <p>Potensi pangan lokal untuk pengembangan usaha masyarakat.</p>
+        <a href="#produk" class="text-link">Lihat Katalog →</a>
+      </div>
+    </article>
+
+    <article class="featured-card">
+      <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=700"
+           alt="Kopi">
+      <div class="featured-content">
+        <span>HASIL PERKEBUNAN</span>
+        <h3>Kopi Lokal</h3>
+        <p>Peluang produk perkebunan dengan nilai tambah melalui pengolahan.</p>
+        <a href="#produk" class="text-link">Lihat Katalog →</a>
+      </div>
+    </article>
+
+    <article class="featured-card">
+      <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?w=700"
+           alt="Kerajinan tangan">
+      <div class="featured-content">
+        <span>KERAJINAN</span>
+        <h3>Kreativitas Lokal</h3>
+        <p>Memperkenalkan karya dan kerajinan masyarakat kepada publik.</p>
+        <a href="#produk" class="text-link">Lihat Katalog →</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- CERITA PUNCAK JAYA -->
+<section class="story-section" id="cerita">
+  <div class="story-image">
+    <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=900"
+         alt="Ilustrasi alam">
+  </div>
+  <div class="story-content">
+    <span class="tag">CERITA POTENSI DAERAH</span>
+    <h2>Puncak Jaya Memiliki Potensi yang Perlu Dikembangkan</h2>
+    <p>
+      Puncak Jaya memiliki potensi sumber daya alam,
+      hasil pertanian, kreativitas masyarakat dan peluang
+      usaha lokal yang dapat dikembangkan secara berkelanjutan.
+    </p>
+    <p>
+      Melalui platform digital ini, kami ingin membuka ruang
+      informasi, promosi, dan pemasaran bagi produk masyarakat.
+    </p>
+    <a href="#tentang" class="btn">Pelajari Selengkapnya</a>
+  </div>
+</section>
+
+<!-- CARA BERBELANJA -->
+<section class="section" id="cara-belanja">
+  <span class="tag">BELANJA MUDAH</span>
+  <h2>Bagaimana Cara Memesan?</h2>
+
+  <div class="about-grid">
+    <div class="info-card">
+      <h3>01. 🔍 Pilih Produk</h3>
+      <p>Cari produk yang ingin dibeli melalui katalog.</p>
+    </div>
+    <div class="info-card">
+      <h3>02. 🛒 Keranjang</h3>
+      <p>Tambahkan produk yang ingin dipesan.</p>
+    </div>
+    <div class="info-card">
+      <h3>03. 📝 Isi Data</h3>
+      <p>Masukkan nama, nomor WhatsApp dan alamat.</p>
+    </div>
+    <div class="info-card">
+      <h3>04. 📲 Kirim Pesanan</h3>
+      <p>Kirim pesanan melalui WhatsApp untuk konfirmasi.</p>
+    </div>
+  </div>
+</section>
+
+<!-- UMKM -->
+<section class="join-section" id="gabung">
+  <div>
+    <span class="tag">PELUANG UNTUK MASYARAKAT</span>
+    <h2>Anda Punya Produk Lokal?</h2>
+    <p>
+      Jangan biarkan produk lokal hanya dikenal di lingkungan
+      sendiri. Mari perkenalkan usaha dan hasil karya Anda
+      kepada masyarakat yang lebih luas.
+    </p>
+    <a href="#layanan-penjual" class="btn">Daftar Produk Sekarang</a>
+  </div>
+  <div class="join-icon">🤝</div>
+</section>
+
+<!-- NILAI DAN KOMITMEN -->
+<section class="section" id="komitmen">
+  <span class="tag">KOMITMEN KAMI</span>
+  <h2>Membangun Masa Depan Ekonomi Lokal</h2>
+
+  <div class="about-grid">
+    <div class="info-card">
+      <h3>🌱 Berkelanjutan</h3>
+      <p>Mendorong pengembangan potensi ekonomi daerah.</p>
+    </div>
+    <div class="info-card">
+      <h3>💡 Inovasi</h3>
+      <p>Memanfaatkan teknologi untuk membuka peluang baru.</p>
+    </div>
+    <div class="info-card">
+      <h3>❤️ Kebersamaan</h3>
+      <p>Membangun kerja sama antara produsen dan konsumen.</p>
+    </div>
+    <div class="info-card">
+      <h3>⭐ Kualitas</h3>
+      <p>Mendorong produk yang berkualitas dan terpercaya.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONI CONTOH -->
+<section class="section testimonial-section" id="testimoni">
+  <span class="tag">SUARA PELANGGAN</span>
+  <h2>Pengalaman Bersama Produk Lokal</h2>
+
+  <div class="about-grid">
+    <div class="info-card">
+      <h3>★★★★★</h3>
+      <p>"Platform seperti ini bisa membantu memperkenalkan potensi produk lokal."</p>
+      <b>Contoh testimoni pengunjung</b>
+    </div>
+    <div class="info-card">
+      <h3>★★★★★</h3>
+      <p>"Pemasaran digital memberikan peluang bagi usaha masyarakat untuk berkembang."</p>
+      <b>Contoh testimoni pelaku usaha</b>
+    </div>
+    <div class="info-card">
+      <h3>★★★★★</h3>
+      <p>"Informasi produk lebih mudah ditemukan melalui katalog online."</p>
+      <b>Contoh testimoni pembeli</b>
+    </div>
+  </div>
+  <p class="note">Testimoni di atas merupakan contoh desain, bukan ulasan pelanggan nyata.</p>
+</section>
+
+<!-- AJAKAN PENUTUP -->
+<section class="final-banner">
+  <span>🌿 PRODUK PUNCAK JAYA</span>
+  <h2>Produk Lokal, Kebanggaan Daerah</h2>
+  <p>
+    Bersama membangun peluang, memperkenalkan potensi,
+    dan mengembangkan ekonomi masyarakat Puncak Jaya.
+  </p>
+  <a href="#produk" class="btn">Mulai Jelajahi Produk</a>
+</section>
+
+
+<!-- AJAKAN MENDUKUNG PRODUK LOKAL -->
+<section class="penutup-website">
+  <div class="penutup-content">
+    <span>BERSAMA MEMBANGUN PUNCAK JAYA</span>
+    <h2>Dukung Produk Lokal, Majukan Ekonomi Masyarakat!</h2>
+    <p>
+      Mari mengenal, membeli, dan mempromosikan produk lokal
+      Puncak Jaya agar semakin dikenal oleh masyarakat luas.
+    </p>
+    <a href="#produkList" class="btn-penutup">
+      Jelajahi Produk Lokal
+    </a>
+  </div>
+</section>
+
+<!-- INFORMASI WEBSITE -->
+<section class="informasi-akhir">
+  <div class="informasi-grid">
+
+    <div>
+      <h2>PRODUK PUNCAK JAYA</h2>
+      <p>
+        Platform informasi dan promosi pengembangan produk lokal
+        Kabupaten Puncak Jaya.
+      </p>
+    </div>
+
+    <div>
+      <h3>Menu Website</h3>
+      <a href="#beranda">Beranda</a>
+      <a href="#tentang">Tentang Kami</a>
+      <a href="#produk">Produk Lokal</a>
+      <a href="#lokasi">Lokasi Puncak Jaya</a>
+    </div>
+
+    <div>
+      <h3>Informasi</h3>
+      <a href="#visi-misi">Visi dan Misi</a>
+      <a href="#pendiri">Profil Pendiri</a>
+      <a href="#kontak">Hubungi Kami</a>
+      <a href="#gabung">Daftar Penjual</a>
+    </div>
+
+    <div>
+      <h3>Kontak Pengelola</h3>
+      <p>Admin: Ulla Newabakc</p>
+      <p>Kabupaten Puncak Jaya</p>
+      <p>Papua Pegunungan, Indonesia</p>
+      <a href="mailto:admin@produkpuncakjaya.com">
+        Email Pengelola
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer-akhir">
+  <div class="footer-logo">🌿 PRODUK PUNCAK JAYA</div>
+
+  <p>
+    Mengangkat potensi lokal, membangun ekonomi masyarakat,
+    dan memperkenalkan produk Puncak Jaya kepada dunia.
+  </p>
+
+  <div class="footer-social">
+    <a href="#kontak">Hubungi Admin</a>
+    <a href="#produk">Belanja Produk</a>
+    <a href="#lokasi">Lokasi Kami</a>
+  </div>
+
+  <div class="footer-line"></div>
+
+  <p class="copyright">
+    © 2026 Produk Puncak Jaya. Seluruh Hak Cipta Dilindungi.
+  </p>
+
+  <p class="footer-founder">
+    Website dikembangkan oleh <strong>Ulla Newabakc</strong>
+  </p>
+</footer>
+</body>
+</html>
